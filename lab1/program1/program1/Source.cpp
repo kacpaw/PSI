@@ -1,5 +1,5 @@
-#include <iostream>
 #include "Neuron.h"
+#include <iostream>
 #include <ctime>
 
 
@@ -17,6 +17,10 @@ double funkcjaAktywuj¹ca(double x, double threshold)
 
 int main()
 {
+	
+	srand(time(NULL));
+
+
 	double **inputs = new double*[4];
 	for (int i = 0; i < 4; i++)
 		inputs[i] = new double[2];
@@ -28,28 +32,22 @@ int main()
 	double outputs[4] = { 0,1,1,1 };
 
 
-	Neuron *neuron1=new Neuron(2);
-	Neuron *neuron2 = new Neuron(2);
-	Neuron *neuron3 = new Neuron(2);
-	Neuron *neuron4 = new Neuron(2);
-	Neuron *neuron5 = new Neuron(2);
-	Neuron *neuron6 = new Neuron(2);
+	Neuron *neuron1 = new Neuron(2);
+	neuron1->setActivatingFunction(funkcjaAktywuj¹ca);
 
-	neuron1->setFunkcjaAktywuj¹ca(funkcjaAktywuj¹ca);
-	neuron2->setFunkcjaAktywuj¹ca(funkcjaAktywuj¹ca);
-	neuron3->setFunkcjaAktywuj¹ca(funkcjaAktywuj¹ca);
-	neuron4->setFunkcjaAktywuj¹ca(funkcjaAktywuj¹ca);
-	neuron5->setFunkcjaAktywuj¹ca(funkcjaAktywuj¹ca);
-	neuron6->setFunkcjaAktywuj¹ca(funkcjaAktywuj¹ca);
 
 
 	double e=1;
 	int i;
+	double ni = 0.8;
 	for (i = 0; e>0; i++)
 	{
-		(e = ucz(neuron1, inputs, outputs, 4, 0.001));
+		std::cout << "blad sredniokwadratowy: " << (e = ucz(neuron1, inputs, outputs, 4, ni)) << std::endl;
 	}
 	std::cout << i << " cykli uczenia\n";
+
+
+
 
 	system("pause");
 	return 0;
@@ -72,6 +70,7 @@ double ucz(Neuron *neuron, double** inputs, double *outputs, int n, double ni)
 {
 	double error1=0, error=0;
 	bool *T = new bool[n];
+
 	for (int i = 0; i < n; i++)
 	{
 		T[i] = false;

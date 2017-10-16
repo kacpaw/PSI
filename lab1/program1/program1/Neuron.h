@@ -12,7 +12,7 @@ public:
 	void setWagi(double *m_wagi);
 	void setWagi(double x, int i);
 	void setN(int m_n);
-	void setFunkcjaAktywuj¹ca(fun1 funkcjaAktywuj¹ca);
+	void setActivatingFunction(fun1 funkcjaAktywuj¹ca);
 	double getWagi(int i);
 	int getN() { return n; }
 	double start(double *m_input);
@@ -21,10 +21,9 @@ public:
 
 
 private:
-	double *wagi;
+	double *weights;
 	int n;
-	fun1 funkcjaAktywuj¹ca;
-	fun1 pochodna;
+	fun1 activatingFunction;
 	double threshold;
 	double b;
 
