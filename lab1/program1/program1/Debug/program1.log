@@ -1,6 +1,4 @@
-﻿  Neuron.cpp
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Source.cpp
+﻿  Source.cpp
+c:\users\kacper\desktop\psi\lab1\program1\program1\source.cpp(21): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   program1.vcxproj -> C:\Users\Kacper\Desktop\PSI\lab1\program1\Debug\program1.exe
   program1.vcxproj -> C:\Users\Kacper\Desktop\PSI\lab1\program1\Debug\program1.pdb (Partial PDB)

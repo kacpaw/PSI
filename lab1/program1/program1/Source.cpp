@@ -39,7 +39,7 @@ int main()
 
 	double e=1;
 	int i;
-	double ni = 0.8;
+	double ni = 0.01;
 	for (i = 0; e>0; i++)
 	{
 		std::cout << "blad sredniokwadratowy: " << (e = ucz(neuron1, inputs, outputs, 4, ni)) << std::endl;
