@@ -25,10 +25,10 @@ int main()
 	for (int i = 0; i < 4; i++)
 		inputs[i] = new double[2];
 	
-	inputs[0][0] = 0; 	inputs[0][1] = 0;
-	inputs[1][0] = 0; 	inputs[1][1] = 1;
-	inputs[2][0] = 1; 	inputs[2][1] = 0;
-	inputs[3][0] = 1; 	inputs[3][1] = 1;
+	inputs[0][0] = -2; 	inputs[0][1] = -2;
+	inputs[1][0] = 2; 	inputs[1][1] = -2;
+	inputs[2][0] = 2; 	inputs[2][1] = 2;
+	inputs[3][0] = -2; 	inputs[3][1] = 2;
 	double outputs[4] = { 0,1,1,1 };
 
 
